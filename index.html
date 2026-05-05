@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PropertyMatcher — Get Matched With Australia's Best Buyers Agents. Free.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest: #1c3d2b;
+  --forest-deep: #0f2018;
+  --forest-mid: #264d38;
+  --sage: #4f7d62;
+  --sage-light: #7aaa8f;
+  --mint: #eaf4ee;
+  --mint-mid: #d1e9db;
+  --ivory: #faf8f3;
+  --ivory-dark: #ede9df;
+  --warm-white: #fffef9;
+  --amber: #c47a28;
+  --amber-light: #da9240;
+  --text: #192820;
+  --text-mid: #3a5246;
+  --text-soft: #6a8476;
+  --white: #ffffff;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Mulish', sans-serif; background: var(--ivory); color: var(--text); overflow-x: hidden; }
+
+/* ─── NAV ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 400;
+  height: 66px; background: rgba(250,248,243,0.96); backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(28,61,43,0.1);
+  display: flex; align-items: center; justify-content: space-between; padding: 0 52px;
+}
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: var(--forest); text-decoration: none; letter-spacing: -0.3px; }
+.logo em { font-style: normal; color: var(--amber); }
+nav ul { list-style: none; display: flex; gap: 34px; align-items: center; }
+nav a { font-size: 13.5px; font-weight: 600; color: var(--text-mid); text-decoration: none; transition: color .18s; }
+nav a:hover { color: var(--forest); }
+.nav-cta { background: var(--forest); color: var(--white) !important; padding: 9px 22px; border-radius: 5px; font-weight: 700 !important; transition: background .18s !important; }
+.nav-cta:hover { background: var(--forest-mid) !important; }
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh; padding-top: 66px;
+  background: var(--forest-deep);
+  display: flex; align-items: center;
+  position: relative; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 70% at 70% 30%, rgba(79,125,98,0.16) 0%, transparent 65%),
+              radial-gradient(ellipse 40% 50% at 10% 80%, rgba(196,122,40,0.07) 0%, transparent 55%);
+}
+.hero-grid {
+  position: absolute; inset: 0; opacity: 0.022;
+  background-image: linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+.hero-inner {
+  max-width: 1200px; margin: 0 auto; padding: 80px 52px;
+  display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 80px; align-items: center;
+  position: relative; z-index: 2; width: 100%;
+}
+.h-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(79,125,98,0.15); border: 1px solid rgba(122,170,143,0.28);
+  padding: 5px 16px; border-radius: 30px; margin-bottom: 26px;
+  font-size: 11px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; color: var(--sage-light);
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 5.8vw, 72px); font-weight: 700; line-height: 1.06; color: var(--white); margin-bottom: 22px;
+}
+.hero h1 i { font-style: italic; color: var(--amber); }
+.hero-sub { font-size: 17px; line-height: 1.8; color: rgba(255,255,255,0.62); margin-bottom: 38px; max-width: 460px; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 44px; }
+.btn-primary {
+  background: var(--amber); color: var(--forest-deep); padding: 15px 34px;
+  border-radius: 5px; font-size: 15px; font-weight: 700; text-decoration: none; display: inline-block;
+  transition: all .2s; letter-spacing: -0.1px;
+}
+.btn-primary:hover { background: var(--amber-light); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(196,122,40,0.32); }
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.22); color: var(--white); padding: 15px 34px;
+  border-radius: 5px; font-size: 15px; font-weight: 500; text-decoration: none; display: inline-block;
+  transition: all .2s;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.55); }
+.trust-pills { display: flex; gap: 22px; }
+.tp { font-size: 12.5px; color: rgba(255,255,255,0.44); display: flex; align-items: center; gap: 6px; }
+.tp-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--sage-light); }
+
+/* Hero card */
+.hero-card {
+  background: var(--warm-white); border-radius: 18px; padding: 36px;
+  box-shadow: 0 52px 100px rgba(0,0,0,0.3); position: relative;
+}
+.hc-title { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.hc-sub { font-size: 12.5px; color: var(--text-soft); margin-bottom: 20px; }
+.hc-prog { display: flex; gap: 5px; margin-bottom: 20px; }
+.hcp { flex: 1; height: 3px; border-radius: 2px; background: var(--ivory-dark); transition: background .3s; }
+.hcp.done { background: var(--forest); } .hcp.active { background: var(--amber); }
+.hc-q { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 14px; }
+.hc-opts { display: flex; flex-direction: column; gap: 9px; }
+.hc-opt {
+  padding: 12px 15px; border: 1.5px solid var(--ivory-dark); border-radius: 9px;
+  background: var(--ivory); cursor: pointer; font-size: 13.5px; font-weight: 500; color: var(--text-mid);
+  display: flex; align-items: center; gap: 10px; transition: all .18s;
+}
+.hc-opt:hover, .hc-opt.on { border-color: var(--forest); background: var(--mint); color: var(--forest); }
+.hc-btn {
+  display: block; width: 100%; margin-top: 18px; background: var(--forest); color: var(--white);
+  border: none; padding: 13px; border-radius: 7px; font-size: 14.5px; font-weight: 700;
+  cursor: pointer; font-family: 'Mulish', sans-serif; text-decoration: none; text-align: center;
+  transition: background .2s;
+}
+.hc-btn:hover { background: var(--forest-mid); }
+.float-tag {
+  position: absolute; padding: 9px 15px; border-radius: 8px;
+  font-size: 12px; font-weight: 700; box-shadow: 0 6px 20px rgba(0,0,0,0.18); z-index: 5;
+}
+
+/* ─── SECTIONS ─── */
+.sec { padding: 96px 52px; }
+.sec-white { background: var(--warm-white); }
+.sec-ivory { background: var(--ivory); }
+.sec-forest { background: var(--forest); }
+.sec-mint { background: var(--mint); }
+.wrap { max-width: 1200px; margin: 0 auto; }
+
+.sh { text-align: center; margin-bottom: 60px; }
+.eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; display: block; margin-bottom: 14px; }
+.ey-sage { color: var(--sage); } .ey-amber { color: var(--amber); } .ey-pale { color: var(--sage-light); }
+.sh h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 700; line-height: 1.12; }
+.sh h2.dk { color: var(--text); } .sh h2.lt { color: var(--white); }
+.sh p { font-size: 16px; margin-top: 14px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.75; }
+.sh p.dk { color: var(--text-soft); } .sh p.lt { color: rgba(255,255,255,0.58); }
+
+/* ─── HOW IT WORKS ─── */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+.step { background: var(--warm-white); padding: 44px 36px; position: relative; transition: background .25s; }
+.step:hover { background: var(--mint); }
+.step::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+.step:nth-child(1)::before { background: var(--sage-light); }
+.step:nth-child(2)::before { background: var(--forest); }
+.step:nth-child(3)::before { background: var(--amber); }
+.step-num { font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 700; color: var(--mint-mid); line-height: 1; margin-bottom: 14px; letter-spacing: -2px; }
+.step h3 { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+.step p { font-size: 14px; color: var(--text-soft); line-height: 1.72; }
+
+/* ─── QUIZ ─── */
+.quiz-shell {
+  max-width: 720px; margin: 0 auto;
+  background: var(--warm-white); border-radius: 20px;
+  box-shadow: 0 28px 72px rgba(28,61,43,0.1); overflow: hidden;
+}
+.q-head { background: var(--forest); padding: 34px 46px; }
+.q-bar { height: 4px; background: rgba(255,255,255,0.14); border-radius: 2px; margin-bottom: 15px; }
+.q-fill { height: 100%; background: var(--amber); border-radius: 2px; transition: width .4s; }
+.q-meta { font-size: 11.5px; color: rgba(255,255,255,0.42); margin-bottom: 4px; letter-spacing: 0.3px; }
+.q-title { font-size: 19px; font-weight: 700; color: var(--white); }
+.q-body { padding: 42px 46px; }
+.q-q { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 22px; }
+.q-opts { display: flex; flex-direction: column; gap: 11px; }
+.q-opt {
+  display: flex; align-items: center; gap: 14px; padding: 15px 18px;
+  border: 2px solid var(--ivory-dark); border-radius: 11px; background: var(--ivory);
+  cursor: pointer; transition: all .18s;
+}
+.q-opt:hover, .q-opt.on { border-color: var(--forest); background: var(--mint); }
+.q-opt-em { font-size: 19px; }
+.q-opt-main { font-size: 14.5px; font-weight: 600; color: var(--text); }
+.q-opt-sub { font-size: 12px; color: var(--text-soft); margin-top: 2px; }
+.q-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.q-inprow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 14px; }
+.q-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-soft); margin-bottom: 6px; }
+.q-input {
+  width: 100%; padding: 13px 15px; border: 2px solid var(--ivory-dark); border-radius: 9px;
+  background: var(--ivory); font-size: 14.5px; font-family: 'Mulish', sans-serif; color: var(--text);
+  outline: none; transition: border-color .18s;
+}
+.q-input:focus { border-color: var(--forest); background: var(--warm-white); }
+.q-sel {
+  width: 100%; padding: 13px 15px; border: 2px solid var(--ivory-dark); border-radius: 9px;
+  background: var(--ivory); font-size: 14.5px; font-family: 'Mulish', sans-serif; color: var(--text);
+  outline: none; cursor: pointer; margin-bottom: 14px;
+}
+.q-foot { padding: 0 46px 42px; display: flex; justify-content: space-between; align-items: center; }
+.q-back { background: none; border: none; font-size: 13.5px; font-weight: 600; color: var(--text-soft); cursor: pointer; font-family: 'Mulish', sans-serif; transition: color .18s; }
+.q-back:hover { color: var(--text); }
+.q-next { background: var(--forest); color: var(--white); border: none; padding: 13px 30px; border-radius: 7px; font-size: 14.5px; font-weight: 700; cursor: pointer; font-family: 'Mulish', sans-serif; transition: all .18s; }
+.q-next:hover { background: var(--forest-mid); transform: translateY(-1px); }
+.q-submit { background: var(--amber); color: var(--forest-deep); border: none; padding: 14px 34px; border-radius: 7px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: 'Mulish', sans-serif; transition: all .18s; }
+.q-submit:hover { background: var(--amber-light); }
+.q-trust { font-size: 12px; color: var(--text-soft); display: flex; align-items: center; gap: 5px; }
+
+/* Quiz success */
+.q-success { padding: 56px 46px; text-align: center; }
+.s-icon { width: 76px; height: 76px; background: var(--mint); border-radius: 50%; margin: 0 auto 18px; display: flex; align-items: center; justify-content: center; font-size: 34px; }
+.q-success h3 { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+.q-success p { font-size: 14.5px; color: var(--text-soft); line-height: 1.7; }
+.s-box { background: var(--ivory); border-radius: 12px; padding: 22px; margin: 24px 0; text-align: left; }
+.s-box h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-soft); margin-bottom: 14px; }
+.s-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--ivory-dark); font-size: 13.5px; }
+.s-row:last-child { border: none; }
+.s-k { color: var(--text-soft); } .s-v { font-weight: 700; color: var(--text); }
+
+/* ─── CALCULATORS ─── */
+.c-tabs { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 44px; }
+.c-tab {
+  padding: 9px 22px; border-radius: 30px; border: 1.5px solid rgba(255,255,255,0.17);
+  background: transparent; color: rgba(255,255,255,0.56); font-size: 13px; font-weight: 600;
+  cursor: pointer; font-family: 'Mulish', sans-serif; transition: all .18s;
+}
+.c-tab.on, .c-tab:hover { background: var(--amber); color: var(--forest-deep); border-color: var(--amber); font-weight: 700; }
+.cpanel { display: none; }
+.cpanel.on { display: block; }
+.c-card {
+  max-width: 840px; margin: 0 auto;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; overflow: hidden;
+}
+.c-2col { display: grid; grid-template-columns: 1fr 1fr; }
+.c-left { padding: 40px; border-right: 1px solid rgba(255,255,255,0.07); }
+.c-right { padding: 40px; }
+.c-lbl { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); display: block; margin-bottom: 7px; }
+.c-inp {
+  width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 7px; padding: 12px 15px; color: var(--white); font-size: 14.5px;
+  font-family: 'Mulish', sans-serif; margin-bottom: 17px; outline: none; transition: border-color .18s;
+}
+.c-inp:focus { border-color: var(--sage-light); }
+.c-sel {
+  width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 7px; padding: 12px 15px; color: var(--white); font-size: 14.5px;
+  font-family: 'Mulish', sans-serif; margin-bottom: 17px; outline: none; cursor: pointer;
+}
+.c-sel option { background: var(--forest-deep); }
+.c-btn {
+  width: 100%; background: var(--amber); color: var(--forest-deep); border: none;
+  padding: 14px; border-radius: 7px; font-size: 14.5px; font-weight: 700; cursor: pointer;
+  font-family: 'Mulish', sans-serif; transition: background .18s;
+}
+.c-btn:hover { background: var(--amber-light); }
+.c-res-lbl { font-size: 11px; color: rgba(255,255,255,0.4); margin-bottom: 8px; letter-spacing: 0.5px; }
+.c-res-big { font-family: 'Cormorant Garamond', serif; font-size: 50px; font-weight: 700; color: var(--amber); line-height: 1; margin-bottom: 24px; }
+.c-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-size: 13.5px; }
+.c-row:last-child { border: none; }
+.c-rk { color: rgba(255,255,255,0.5); } .c-rv { font-weight: 700; color: var(--white); }
+
+/* ─── BLOG ─── */
+.blog-feature {
+  max-width: 1200px; margin: 0 auto 40px;
+  display: grid; grid-template-columns: 1.2fr 1fr;
+  background: var(--forest); border-radius: 18px; overflow: hidden;
+}
+.bf-text { padding: 48px; }
+.bf-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--amber); background: rgba(196,122,40,0.12); padding: 4px 12px;
+  border-radius: 4px; display: inline-block; margin-bottom: 16px;
+}
+.bf-text h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: var(--white); line-height: 1.25; margin-bottom: 14px; }
+.bf-text p { font-size: 14px; color: rgba(255,255,255,0.62); line-height: 1.75; }
+.bf-img { background: linear-gradient(135deg, #264d38, #0f2018); display: flex; align-items: center; justify-content: center; font-size: 80px; }
+.read-more { display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; color: var(--amber); font-size: 13.5px; font-weight: 700; text-decoration: none; transition: gap .18s; }
+.read-more:hover { gap: 10px; }
+
+.b-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.b-card { background: var(--warm-white); border-radius: 14px; overflow: hidden; cursor: pointer; transition: transform .2s, box-shadow .2s; }
+.b-card:hover { transform: translateY(-4px); box-shadow: 0 18px 50px rgba(28,61,43,0.09); }
+.b-img { height: 165px; display: flex; align-items: center; justify-content: center; font-size: 44px; }
+.bi1 { background: linear-gradient(135deg,#1c3d2b,#2e6648); } .bi2 { background: linear-gradient(135deg,#2b3d1c,#487328); }
+.bi3 { background: linear-gradient(135deg,#1c2b3d,#284566); } .bi4 { background: linear-gradient(135deg,#3d2b1c,#664628); }
+.bi5 { background: linear-gradient(135deg,#2b1c3d,#462866); } .bi6 { background: linear-gradient(135deg,#1c3d35,#286657); }
+.b-cont { padding: 22px; }
+.b-tag { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--sage); background: var(--mint); padding: 3px 10px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }
+.b-card h3 { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.45; margin-bottom: 8px; }
+.b-card p { font-size: 13px; color: var(--text-soft); line-height: 1.6; }
+.b-foot { padding: 10px 22px 18px; display: flex; justify-content: space-between; font-size: 11.5px; color: var(--text-soft); border-top: 1px solid var(--ivory-dark); margin-top: 10px; }
+
+/* ─── WHY ─── */
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.why-left h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4vw, 46px); font-weight: 700; color: var(--text); line-height: 1.15; margin-bottom: 18px; }
+.why-left h2 em { font-style: italic; color: var(--forest); }
+.why-left > p { font-size: 15.5px; color: var(--text-soft); line-height: 1.8; margin-bottom: 28px; }
+.why-list { list-style: none; }
+.why-item { display: flex; gap: 14px; margin-bottom: 16px; align-items: flex-start; }
+.why-check { width: 21px; height: 21px; min-width: 21px; background: var(--mint); color: var(--forest); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; margin-top: 2px; }
+.why-item p { font-size: 14.5px; color: var(--text-mid); line-height: 1.6; }
+.why-item strong { color: var(--text); }
+.t-card { background: var(--ivory); border: 1px solid var(--ivory-dark); border-radius: 14px; padding: 26px; margin-bottom: 16px; transition: border-color .2s; }
+.t-card:hover { border-color: var(--sage-light); }
+.stars { color: var(--amber); font-size: 14px; margin-bottom: 10px; }
+.t-quote { font-size: 14px; color: var(--text-mid); font-style: italic; line-height: 1.65; margin-bottom: 14px; }
+.t-author { display: flex; gap: 11px; align-items: center; }
+.t-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--forest); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; }
+.t-name { font-size: 13px; font-weight: 700; color: var(--text); }
+.t-loc { font-size: 11.5px; color: var(--text-soft); }
+
+/* ─── CTA STRIP ─── */
+.cta-strip { background: var(--forest-deep); padding: 80px 52px; text-align: center; position: relative; overflow: hidden; }
+.cta-strip::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 90% at 50% 50%, rgba(79,125,98,0.14) 0%, transparent 70%); }
+.cta-strip h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4vw, 50px); font-weight: 700; color: var(--white); margin-bottom: 16px; position: relative; z-index: 1; }
+.cta-strip p { font-size: 17px; color: rgba(255,255,255,0.58); max-width: 500px; margin: 0 auto 34px; position: relative; z-index: 1; }
+.btn-amber-lg {
+  background: var(--amber); color: var(--forest-deep); padding: 17px 44px;
+  border-radius: 6px; border: none; font-size: 16px; font-weight: 700; cursor: pointer;
+  font-family: 'Mulish', sans-serif; text-decoration: none; display: inline-block;
+  transition: all .2s; position: relative; z-index: 1;
+}
+.btn-amber-lg:hover { background: var(--amber-light); transform: translateY(-2px); }
+
+/* ─── FOOTER ─── */
+footer { background: #0a170e; padding: 56px 52px 28px; }
+.f-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 44px; }
+.f-brand .logo { display: block; margin-bottom: 14px; }
+.f-brand p { font-size: 13px; color: rgba(255,255,255,0.33); line-height: 1.78; }
+.f-col h4 { font-size: 10.5px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.26); margin-bottom: 16px; }
+.f-col ul { list-style: none; }
+.f-col li { margin-bottom: 10px; }
+.f-col a { font-size: 13px; color: rgba(255,255,255,0.48); text-decoration: none; transition: color .18s; }
+.f-col a:hover { color: var(--amber); }
+.f-base { max-width: 1200px; margin: 0 auto; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.2); }
+.f-dis { font-size: 11px; color: rgba(255,255,255,0.16); margin-top: 14px; max-width: 1200px; margin-left: auto; margin-right: auto; line-height: 1.65; }
+
+/* ─── UTILITIES ─── */
+.hidden { display: none !important; }
+.fade { opacity: 0; transform: translateY(18px); transition: opacity .6s, transform .6s; }
+.fade.vis { opacity: 1; transform: none; }
+
+@media (max-width: 900px) {
+  nav ul { display: none; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+  .steps, .c-2col, .why-grid, .blog-feature { grid-template-columns: 1fr; }
+  .b-grid { grid-template-columns: 1fr 1fr; }
+  .f-grid { grid-template-columns: 1fr 1fr; }
+  .q-body, .q-foot { padding-left: 22px; padding-right: 22px; }
+  .q-head { padding: 24px; }
+}
+@media (max-width: 600px) {
+  .b-grid, .f-grid { grid-template-columns: 1fr; }
+  nav { padding: 0 20px; }
+  .hero-inner, .sec { padding-left: 20px; padding-right: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#">Property<em>Matcher</em></a>
+  <ul>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#calcs">Calculators</a></li>
+    <li><a href="#blog">Resources</a></li>
+    <li><a href="#quiz" class="nav-cta">Get Matched Free</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="h-badge">🇦🇺 Australia's Free Buyer Matching Platform</div>
+      <h1>Stop Searching.<br>Start Buying <i>Smarter.</i></h1>
+      <p class="hero-sub">Tell us your goals in 3 minutes and we'll match you with a vetted, specialist buyers agent — whether you're securing your first home or growing an investment portfolio.</p>
+      <div class="hero-btns">
+        <a href="#quiz" class="btn-primary">Start My Free Match →</a>
+        <a href="#how" class="btn-outline">How It Works</a>
+      </div>
+      <div class="trust-pills">
+        <div class="tp"><div class="tp-dot"></div>100% free</div>
+        <div class="tp"><div class="tp-dot"></div>No obligation</div>
+        <div class="tp"><div class="tp-dot"></div>Matched in 24–48 hrs</div>
+      </div>
+    </div>
+    <div style="position:relative">
+      <div class="float-tag" style="background:var(--forest);color:var(--white);top:-16px;right:-16px">🏆 Vetted Agents Only</div>
+      <div class="hero-card">
+        <div class="hc-title">Find Your Match</div>
+        <div class="hc-sub">Quick 3-question preview</div>
+        <div class="hc-prog">
+          <div class="hcp done" id="hp1"></div>
+          <div class="hcp" id="hp2"></div>
+          <div class="hcp" id="hp3"></div>
+        </div>
+        <div id="hs1">
+          <div class="hc-q">What are you buying?</div>
+          <div class="hc-opts">
+            <div class="hc-opt" onclick="hNext(this,1)">🏠 <span>First Home</span></div>
+            <div class="hc-opt" onclick="hNext(this,1)">📈 <span>Investment Property</span></div>
+            <div class="hc-opt" onclick="hNext(this,1)">⬆️ <span>Upgrading / Upsizing</span></div>
+          </div>
+        </div>
+        <div id="hs2" class="hidden">
+          <div class="hc-q">What's your budget?</div>
+          <div class="hc-opts">
+            <div class="hc-opt" onclick="hNext(this,2)">💰 <span>Under $600k</span></div>
+            <div class="hc-opt" onclick="hNext(this,2)">💰 <span>$600k – $1.2M</span></div>
+            <div class="hc-opt" onclick="hNext(this,2)">💎 <span>$1.2M+</span></div>
+          </div>
+        </div>
+        <div id="hs3" class="hidden">
+          <div class="hc-q">Which state?</div>
+          <div class="hc-opts" style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <div class="hc-opt" onclick="hDone(this)">🏙️ VIC</div>
+            <div class="hc-opt" onclick="hDone(this)">🌉 NSW</div>
+            <div class="hc-opt" onclick="hDone(this)">☀️ QLD</div>
+            <div class="hc-opt" onclick="hDone(this)">🌅 WA</div>
+          </div>
+        </div>
+        <div id="hs-done" class="hidden" style="text-align:center;padding:14px 0">
+          <div style="font-size:38px;margin-bottom:12px">✅</div>
+          <div style="font-weight:700;font-size:15px;margin-bottom:6px">Great — let's finish your profile</div>
+          <div style="font-size:12.5px;color:var(--text-soft);margin-bottom:18px">Takes under 3 minutes</div>
+          <a href="#quiz" class="hc-btn">Complete My Profile →</a>
+        </div>
+      </div>
+      <div class="float-tag" style="background:var(--amber);color:var(--forest-deep);bottom:-14px;left:-16px">⚡ Matched in 24–48 hrs</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec sec-white" id="how">
+  <div class="wrap fade">
+    <div class="sh">
+      <span class="eyebrow ey-sage">The Process</span>
+      <h2 class="dk">Three Steps to Your Expert Advocate</h2>
+      <p class="dk">We match you with a specialist buyers agent who knows your market, your budget, and your goals — so you negotiate from a position of strength.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Complete Your Profile</h3>
+        <p>Our smart 3-minute quiz captures your goals, budget, deposit, income, existing portfolio, and timeline — giving your matched agent everything they need before your first call.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>We Find Your Match</h3>
+        <p>We filter our national network of vetted buyers agents by your exact criteria — target state, property type, price range, and buyer experience. Precision matching, not a spam list.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Free Discovery Call</h3>
+        <p>Your matched agent contacts you within 48 hours for a free, no-obligation call — sharing their strategy, market knowledge, and how they'll help you buy smarter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="sec sec-ivory" id="quiz">
+  <div class="wrap fade">
+    <div class="sh">
+      <span class="eyebrow ey-sage">Free Assessment</span>
+      <h2 class="dk">Tell Us About Your Property Goals</h2>
+      <p class="dk">Answer 9 quick questions and we'll match you with the right buyers agent. Zero cost, zero obligation.</p>
+    </div>
+    <div class="quiz-shell">
+
+      <div id="qs1">
+        <div class="q-head"><div class="q-bar"><div class="q-fill" style="width:10%"></div></div><div class="q-meta">Step 1 of 9 · Your Goal</div><div class="q-title">Why are you buying property?</div></div>
+        <div class="q-body"><div class="q-q">What's your primary reason for this purchase?</div>
+          <div class="q-opts">
+            <div class="q-opt" onclick="qSel(this,'goal','fh')"><span class="q-opt-em">🏠</span><div><div class="q-opt-main">First Home</div><div class="q-opt-sub">Getting onto the property ladder</div></div></div>
+            <div class="q-opt" onclick="qSel(this,'goal','inv')"><span class="q-opt-em">📈</span><div><div class="q-opt-main">Investment Property</div><div class="q-opt-sub">Building long-term wealth through real estate</div></div></div>
+            <div class="q-opt" onclick="qSel(this,'goal','up')"><span class="q-opt-em">⬆️</span><div><div class="q-opt-main">Upgrading / Upsizing</div><div class="q-opt-sub">Moving to something bigger or better located</div></div></div>
+            <div class="q-opt" onclick="qSel(this,'goal','dn')"><span class="q-opt-em">📦</span><div><div class="q-opt-main">Downsizing</div><div class="q-opt-sub">Simplifying to a smaller, easier property</div></div></div>
+          </div>
+        </div>
+        <div class="q-foot"><div class="q-trust">🔒 Private &amp; secure</div><button class="q-next" onclick="qGo(1,2)">Continue →</button></div>
+      </div>
+
+      <div id="qs2" class="hidden">
+        <div class="q-head"><div class="q-bar"><div class="q-fill" style="width:22%"></div></div><div class="q-meta">Step 2 of 9 · Budget</div><div class="q-title">What's your purchase budget?</div></div>
+        <div class="q-body"><div class="q-q">Approximate purchase budget?</div>
+          <div class="q-opts q-2col">
+            <div class="q-opt" onclick="qSel(this,'budget','u500')"><span class="q-opt-em">💵</span><div class="q-opt-main">Under $500k</div></div>
+            <div class="q-opt" onclick="qSel(this,'budget','500_800')"><span class="q-opt-em">💵</span><div class="q-opt-main">$500k – $800k</div></div>
+            <div class="q-opt" onclick="qSel(this,'budget','800_1200')"><span class="q-opt-em">💰</span><div class="q-opt-main">$800k – $1.2M</div></div>
+            <div class="q-opt" onclick="qSel(this,'budget','1200_2m')"><span class="q-opt-em">💎</span><div class="q-opt-main">$1.2M – $2M</div></div>
+            <div class="q-opt" onclick="qSel(this,'budget','2mplus')"><span class="q-opt-em">🏆</span><div class="q-opt-main">$2M+</div></div>
+          </div>
+        </div>
+        <div class="q-foot"><button class="q-back" onclick="qGo(2,1)">← Back</button><button class="q-next" onclick="qGo(2,3)">Continue →</button></div>
+      </div>
+
+      <div id="qs3" class="hidden">
+        <div class="q-head"><div class="q-bar"><div class="q-fill" style="width:33%"></div></div><div class="q-meta">Step 3 of 9 · Deposit</div><div class="q-title">How much have you saved?</div></div>
+        <div class="q-body"><div class="q-q">Current deposit savings?</div>
+          <div class="q-opts q-2col">
+            <div class="q-opt" onclick="qSel(this,'savings','u50')"><span class="q-opt-em">💵</span><div class="q-opt-main">Under $50k</div></div>
+            <div class="q-opt" onclick="qSel(this,'savings','50_100')"><span class="q-opt-em">💵</span><div class="q-opt-main">$50k – $100k</div></div>
+            <div class="q-opt" onclick="qSel(this,'savings','100_200')"><span class="q-opt-em">💰</span><div class="q-opt-main">$100k – $200k</div></div>
+            <div class="q-opt" onclick="qSel(this,'savings','200plus')"><span class="q-opt-em">💎</span><div class="q-opt-main">$200k+</div></div>
+          </div>
+        </div>
+        <div class="q-foot"><button class="q-back" onclick="qGo(3,2)">← Back</button><button class="q-next" onclick="qGo(3,4)">Continue →</button></div>
+      </div>
+
+      <div id="qs4" class="hidden">
+        <div class="q-head"><div class="q-bar"><div class="q-fill" style="width:44%"></div></div><div class="q-meta">Step 4 of 9 · Income</div><div class="q-title">Household income</div></div>
+        <div class="q-body"><div class="q-q">Annual household income (before tax)?</div>
+          <div class="q-opts q-2col">
+            <div class="q-opt" onclick="qSel(this,'income','u80')"><span class="q-opt-em">💼</span><div class="q-opt-main">Under $80k</div></div>
+            <div class="q-opt" onclick="qSel(this,'income','80_150')"><span class="q-opt-em">💼</span><div class="q-opt-main">$80k – $150k</div></div>
+            <div class="q-opt" onclick="qSel(this,'income','150_250')"><span class="q-opt-em">💼</span><div class="q-opt-main">$150k – $250k</div></div>
+            <div class="q-opt" onclick="qSel(this,'income','250plus')"><span class="q-opt-em">🏆</span><div class="q-opt-main">$250k+</div></div>
+          </div>
+        </div>
+        <div class="q-foot"><button class="q-back" onclick="qGo(4,3)">← Back</button><button class="q-next" onclick="qGo(4,5)">Continue →</button></div>
+      </div>
+
+      <div id="qs5" class="hidden">
+        <div class="q-head"><div class="q-bar"><div class="q-fill" style="width:55%"></div></div><div class="q-meta">Step 5 of 9 · Portfolio</div><div class="q-title">Existing properties</div></div>
+        <div class="q-body"><div class="q-q">How many investment properties do you own?</div>
+          <div class="q-opts q-2col">
+            <div class="q-opt" onclick="qSel(this,'existing','none')"><span class="q-opt-em">0️⃣</span><div class="q-opt-main">None – first time</div></div>
+            <div class="q-opt" onclick="qSel(this,'existing','one')"><span class="q-opt-em">1️⃣</span><div class="q-opt-main">1 property</div></div>
+            <div class="q-opt" onclick="qSel(this,'existing','two3')"><span class="q-opt-em">2️⃣</span><div class="q-opt-main">2–3 properties</div></div>
+            <div class="q-opt" onclick="qSel(this,'existing','4plus')"><span class="q-opt-em">🏘️</span><div class="q-opt-main">4+ properties</div></div>
+          </div>
+        </div>
+        <div class="q-foot"><button class="q-back" onclick="qGo(5,4)">← Back</button><button class="q-next" onclick="qGo(5,6)">Continue →</button></div>
+      </div>
+
+      <div id="qs6" class="hidden">
+        <div class="q-head"><div class="q-bar"><div class="q-fill" style="width:64%"></div></div><div class="q-meta">Step 6 of 9 · Situation</div><div class="q-title">Your personal situation</div></div>
+        <div class="q-body"><div class="q-q">Relationship / buying situation?</div>
+          <div class="q-opts q-2col">
+            <div class="q-opt" onclick="qSel(this,'status','single')"><span class="q-opt-em">👤</span><div class="q-opt-main">Single / Sole buyer</div></div>
+            <div class="q-opt" onclick="qSel(this,'status','couple')"><span class="q-opt-em">👥</span><div class="q-opt-main">Couple / Partner</div></div>
+            <div class="q-opt" onclick="qSel(this,'status','family')"><span class="q-opt-em">👨‍👩‍👧</span><div class="q-opt-main">Family with children</div></div>
+            <div class="q-opt" onclick="qSel(this,'status','joint')"><span class="q-opt-em">🤝</span><div class="q-opt-main">Joint buyers</div></div>
+          </div>
+        </div>
+        <div class="q-foot"><button class="q-back" onclick="qGo(6,5)">← Back</button><button class="q-next" onclick="qGo(6,7)">Continue →</button></div>
+      </div>
+
+      <div id="qs7" class="hidden">
+        <div class="q-head"><div class="q-bar"><div class="q-fill" style="width:74%"></div></div><div class="q-meta">Step 7 of 9 · Location</div><div class="q-title">Target location</div></div>
+        <div class="q-body"><div class="q-q">Where in Australia are you buying?</div>
+          <div class="q-opts q-2col">
+            <div class="q-opt" onclick="qSel(this,'state','vic')"><span class="q-opt-em">🏙️</span><div class="q-opt-main">Victoria</div></div>
+            <div class="q-opt" onclick="qSel(this,'state','nsw')"><span class="q-opt-em">🌉</span><div class="q-opt-main">New South Wales</div></div>
+            <div class="q-opt" onclick="qSel(this,'state','qld')"><span class="q-opt-em">☀️</span><div class="q-opt-main">Queensland</div></div>
+            <div class="q-opt" onclick="qSel(this,'state','wa')"><span class="q-opt-em">🌅</span><div class="q-opt-main">Western Australia</div></div>
+            <div class="q-opt" onclick="qSel(this,'state','sa')"><span class="q-opt-em">🏔️</span><div class="q-opt-main">South Australia</div></div>
+            <div class="q-opt" onclick="qSel(this,'state','other')"><span class="q-opt-em">🗺️</span><div class="q-opt-main">ACT / NT / TAS</div></div>
+          </div>
+        </div>
+        <div class="q-foot"><button class="q-back" onclick="qGo(7,6)">← Back</button><button class="q-next" onclick="qGo(7,8)">Continue →</button></div>
+      </div>
+
+      <div id="qs8" class="hidden">
+        <div class="q-head"><div class="q-bar"><div class="q-fill" style="width:85%"></div></div><div class="q-meta">Step 8 of 9 · Timeline</div><div class="q-title">When are you buying?</div></div>
+        <div class="q-body"><div class="q-q">Your purchase timeline?</div>
+          <div class="q-opts q-2col">
+            <div class="q-opt" onclick="qSel(this,'timeline','now')"><span class="q-opt-em">🚀</span><div class="q-opt-main">Ready now / ASAP</div></div>
+            <div class="q-opt" onclick="qSel(this,'timeline','3m')"><span class="q-opt-em">📅</span><div class="q-opt-main">Within 3 months</div></div>
+            <div class="q-opt" onclick="qSel(this,'timeline','6m')"><span class="q-opt-em">📅</span><div class="q-opt-main">3 – 6 months</div></div>
+            <div class="q-opt" onclick="qSel(this,'timeline','12m')"><span class="q-opt-em">🔭</span><div class="q-opt-main">6 – 12 months</div></div>
+          </div>
+        </div>
+        <div class="q-foot"><button class="q-back" onclick="qGo(8,7)">← Back</button><button class="q-next" onclick="qGo(8,9)">Continue →</button></div>
+      </div>
+
+      <div id="qs9" class="hidden">
+        <div class="q-head"><div class="q-bar"><div class="q-fill" style="width:96%"></div></div><div class="q-meta">Step 9 of 9 · Contact</div><div class="q-title">Almost done — where should we reach you?</div></div>
+        <div class="q-body">
+          <div class="q-inprow">
+            <div><div class="q-lbl">First Name *</div><input class="q-input" id="qfn" placeholder="Sarah"></div>
+            <div><div class="q-lbl">Last Name *</div><input class="q-input" id="qln" placeholder="Johnson"></div>
+          </div>
+          <div class="q-lbl">Email Address *</div>
+          <input class="q-input" id="qem" type="email" placeholder="sarah@email.com" style="margin-bottom:14px">
+          <div class="q-lbl">Mobile Number *</div>
+          <input class="q-input" id="qph" type="tel" placeholder="04XX XXX XXX" style="margin-bottom:14px">
+          <div class="q-lbl">Age Range</div>
+          <select class="q-sel" id="qag"><option value="">Select age range</option><option>18–25</option><option>26–35</option><option>36–45</option><option>46–55</option><option>55+</option></select>
+        </div>
+        <div class="q-foot"><button class="q-back" onclick="qGo(9,8)">← Back</button><button class="q-submit" onclick="qSubmit()">Get My Free Match 🎉</button></div>
+      </div>
+
+      <div id="qs-ok" class="hidden q-success">
+        <div class="s-icon">🎉</div>
+        <h3>You're Matched, <span id="s-name"></span>!</h3>
+        <p>We're connecting you with specialist agents right now. Expect a call within <strong>24–48 hours.</strong></p>
+        <div class="s-box"><h4>Your Profile Summary</h4><div id="s-sum"></div></div>
+        <p style="font-size:12.5px;color:var(--text-soft)">Check your inbox for confirmation and next steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATORS -->
+<section class="sec sec-forest" id="calcs">
+  <div class="wrap fade">
+    <div class="sh">
+      <span class="eyebrow ey-amber">Free Tools</span>
+      <h2 class="lt">Property Calculators</h2>
+      <p class="lt">Run the numbers before you commit. Every tool you need in one place.</p>
+    </div>
+    <div class="c-tabs">
+      <button class="c-tab on" onclick="cSwitch(this,'cm')">🏠 Mortgage</button>
+      <button class="c-tab" onclick="cSwitch(this,'cb')">💰 Borrowing Capacity</button>
+      <button class="c-tab" onclick="cSwitch(this,'cs')">🧾 Stamp Duty</button>
+      <button class="c-tab" onclick="cSwitch(this,'cy')">📈 Rental Yield</button>
+      <button class="c-tab" onclick="cSwitch(this,'cc')">💵 Cash Flow</button>
+    </div>
+    <div class="c-card">
+      <!-- MORTGAGE -->
+      <div class="cpanel on" id="cp-cm">
+        <div class="c-2col">
+          <div class="c-left">
+            <label class="c-lbl">Loan Amount ($)</label><input class="c-inp" id="ml" value="600000">
+            <label class="c-lbl">Interest Rate (% p.a.)</label><input class="c-inp" id="mr" value="6.2" step="0.1">
+            <label class="c-lbl">Loan Term</label>
+            <select class="c-sel" id="mt"><option value="30">30 years</option><option value="25">25 years</option><option value="20">20 years</option><option value="15">15 years</option></select>
+            <label class="c-lbl">Repayment Type</label>
+            <select class="c-sel" id="mrt"><option value="pi">Principal & Interest</option><option value="io">Interest Only</option></select>
+            <button class="c-btn" onclick="doMort()">Calculate</button>
+          </div>
+          <div class="c-right">
+            <div class="c-res-lbl">Monthly Repayment</div><div class="c-res-big" id="mm">$3,660</div>
+            <div class="c-row"><span class="c-rk">Weekly</span><span class="c-rv" id="mw">$845</span></div>
+            <div class="c-row"><span class="c-rk">Fortnightly</span><span class="c-rv" id="mf">$1,690</span></div>
+            <div class="c-row"><span class="c-rk">Annual</span><span class="c-rv" id="ma">$43,920</span></div>
+            <div class="c-row"><span class="c-rk">Total Interest</span><span class="c-rv" id="mi">$717,600</span></div>
+            <div class="c-row"><span class="c-rk">Total Repaid</span><span class="c-rv" id="mto">$1,317,600</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- BORROWING -->
+      <div class="cpanel" id="cp-cb">
+        <div class="c-2col">
+          <div class="c-left">
+            <label class="c-lbl">Annual Household Income ($)</label><input class="c-inp" id="bi" value="150000">
+            <label class="c-lbl">Monthly Living Expenses ($)</label><input class="c-inp" id="be" value="3000">
+            <label class="c-lbl">Monthly Debt Repayments ($)</label><input class="c-inp" id="bd" value="500">
+            <label class="c-lbl">Dependants</label>
+            <select class="c-sel" id="bde"><option value="0">None</option><option value="1">1</option><option value="2">2</option><option value="3">3+</option></select>
+            <button class="c-btn" onclick="doBorrow()">Calculate</button>
+          </div>
+          <div class="c-right">
+            <div class="c-res-lbl">Estimated Borrowing Capacity</div><div class="c-res-big" id="bmax">$742,000</div>
+            <div class="c-row"><span class="c-rk">Conservative Estimate</span><span class="c-rv" id="blow">$620,000</span></div>
+            <div class="c-row"><span class="c-rk">Max Monthly Repayment</span><span class="c-rv" id="bmo">$4,210</span></div>
+            <div class="c-row"><span class="c-rk">Net Monthly Income</span><span class="c-rv" id="bnet">$9,800</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- STAMP DUTY -->
+      <div class="cpanel" id="cp-cs">
+        <div class="c-2col">
+          <div class="c-left">
+            <label class="c-lbl">Purchase Price ($)</label><input class="c-inp" id="sdp" value="750000">
+            <label class="c-lbl">State</label>
+            <select class="c-sel" id="sds"><option value="VIC">Victoria</option><option value="NSW">New South Wales</option><option value="QLD">Queensland</option><option value="WA">Western Australia</option><option value="SA">South Australia</option><option value="ACT">ACT</option></select>
+            <label class="c-lbl">Buyer Type</label>
+            <select class="c-sel" id="sdt"><option value="oo">Owner Occupier</option><option value="fhb">First Home Buyer</option><option value="inv">Investor</option></select>
+            <button class="c-btn" onclick="doStamp()">Calculate</button>
+          </div>
+          <div class="c-right">
+            <div class="c-res-lbl">Stamp Duty Payable</div><div class="c-res-big" id="sdv">$40,070</div>
+            <div class="c-row"><span class="c-rk">Purchase Price</span><span class="c-rv" id="sdpp">$750,000</span></div>
+            <div class="c-row"><span class="c-rk">Stamp Duty</span><span class="c-rv" id="sdsd">$40,070</span></div>
+            <div class="c-row"><span class="c-rk">Other Upfront Costs</span><span class="c-rv">~$3,000</span></div>
+            <div class="c-row"><span class="c-rk">Total Upfront</span><span class="c-rv" id="sdtot">$43,070</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- RENTAL YIELD -->
+      <div class="cpanel" id="cp-cy">
+        <div class="c-2col">
+          <div class="c-left">
+            <label class="c-lbl">Property Value ($)</label><input class="c-inp" id="yv" value="650000">
+            <label class="c-lbl">Weekly Rent ($)</label><input class="c-inp" id="yw" value="550">
+            <label class="c-lbl">Annual Costs — rates, insurance, PM ($)</label><input class="c-inp" id="yc" value="8000">
+            <button class="c-btn" onclick="doYield()">Calculate</button>
+          </div>
+          <div class="c-right">
+            <div class="c-res-lbl">Gross Rental Yield</div><div class="c-res-big" id="ygr">4.4%</div>
+            <div class="c-row"><span class="c-rk">Annual Rent</span><span class="c-rv" id="yann">$28,600</span></div>
+            <div class="c-row"><span class="c-rk">Net Yield</span><span class="c-rv" id="ynet">3.2%</span></div>
+            <div class="c-row"><span class="c-rk">Net Annual Income</span><span class="c-rv" id="yni">$20,600</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- CASH FLOW -->
+      <div class="cpanel" id="cp-cc">
+        <div class="c-2col">
+          <div class="c-left">
+            <label class="c-lbl">Purchase Price ($)</label><input class="c-inp" id="cfp" value="700000">
+            <label class="c-lbl">Deposit (%)</label><input class="c-inp" id="cfd" value="20">
+            <label class="c-lbl">Interest Rate (% p.a.)</label><input class="c-inp" id="cfr" value="6.2" step="0.1">
+            <label class="c-lbl">Weekly Rent ($)</label><input class="c-inp" id="cfw" value="600">
+            <label class="c-lbl">Annual Costs ($)</label><input class="c-inp" id="cfc" value="9000">
+            <button class="c-btn" onclick="doCF()">Calculate</button>
+          </div>
+          <div class="c-right">
+            <div class="c-res-lbl">Monthly Cash Flow</div><div class="c-res-big" id="cfmo">-$412</div>
+            <div class="c-row"><span class="c-rk">Monthly Rent</span><span class="c-rv" id="cfmr">$2,600</span></div>
+            <div class="c-row"><span class="c-rk">Monthly Mortgage</span><span class="c-rv" id="cfmm">$2,262</span></div>
+            <div class="c-row"><span class="c-rk">Monthly Costs</span><span class="c-rv" id="cfmc">$750</span></div>
+            <div class="c-row"><span class="c-rk">Annual Position</span><span class="c-rv" id="cfann">-$4,944</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="sec sec-ivory" id="blog">
+  <div class="wrap fade">
+    <div class="sh">
+      <span class="eyebrow ey-sage">Resources & Guides</span>
+      <h2 class="dk">The Property Knowledge Hub</h2>
+      <p class="dk">Suburb spotlights, investment strategies, and market guides to help you buy smarter.</p>
+    </div>
+    <div class="blog-feature">
+      <div class="bf-text">
+        <div class="bf-tag">📍 Featured Guide</div>
+        <h3>Top 10 Investment Suburbs in Victoria for 2025–2026</h3>
+        <p>We analysed rental yields, capital growth history, infrastructure pipelines, and population projections across metro and regional Victoria — ranked and explained for investors right now.</p>
+        <a href="#" class="read-more">Read the Full Guide →</a>
+      </div>
+      <div class="bf-img">🏘️</div>
+    </div>
+    <div class="b-grid">
+      <div class="b-card"><div class="b-img bi1">🏙️</div><div class="b-cont"><div class="b-tag">Sydney</div><h3>Top 10 Investment Areas in Sydney (NSW) 2025</h3><p>Western Sydney's infrastructure surge, Inner West yields, and coastal lifestyle markets ranked.</p></div><div class="b-foot"><span>8 min read</span><span>May 2025</span></div></div>
+      <div class="b-card"><div class="b-img bi2">☀️</div><div class="b-cont"><div class="b-tag">Queensland</div><h3>Best Suburbs in Brisbane & Gold Coast 2025</h3><p>Olympics legacy, population growth, and interstate migration — why QLD is Australia's hottest market.</p></div><div class="b-foot"><span>7 min read</span><span>Apr 2025</span></div></div>
+      <div class="b-card"><div class="b-img bi3">🌅</div><div class="b-cont"><div class="b-tag">Perth</div><h3>Perth Property: Best Suburbs to Buy in 2025</h3><p>Affordability, strong yields, and WA's booming economy — the best Perth opportunities explained.</p></div><div class="b-foot"><span>6 min read</span><span>Apr 2025</span></div></div>
+      <div class="b-card"><div class="b-img bi4">📋</div><div class="b-cont"><div class="b-tag">Strategy</div><h3>What Does a Buyers Agent Do — Is It Worth It?</h3><p>Full breakdown of fees, off-market access, and when professional representation is non-negotiable.</p></div><div class="b-foot"><span>9 min read</span><span>Mar 2025</span></div></div>
+      <div class="b-card"><div class="b-img bi5">💰</div><div class="b-cont"><div class="b-tag">Finance</div><h3>Negative vs Positive Gearing: Which Wins in 2025?</h3><p>Tax scenarios, cash flow modelling, and which strategy wins at different price points.</p></div><div class="b-foot"><span>10 min read</span><span>Mar 2025</span></div></div>
+      <div class="b-card"><div class="b-img bi6">🔑</div><div class="b-cont"><div class="b-tag">First Home Buyers</div><h3>Complete First Home Buyer Guide Australia 2025</h3><p>Every grant and scheme — FHSS, First Home Guarantee, and stamp duty concessions explained.</p></div><div class="b-foot"><span>12 min read</span><span>Feb 2025</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="sec sec-white" id="why">
+  <div class="wrap fade">
+    <div class="why-grid">
+      <div class="why-left">
+        <span class="eyebrow ey-sage">Why PropertyMatcher</span>
+        <h2>Your Advocate. <em>Not the Seller's.</em></h2>
+        <p>Sellers walk into every negotiation with professional representation. So should you. A buyers agent is legally obligated to act in your interest — and only yours.</p>
+        <ul class="why-list">
+          <li class="why-item"><div class="why-check">✓</div><p><strong>100% Free to Get Matched</strong> — Buyers agents pay for qualified referrals. There's no cost to you, ever.</p></li>
+          <li class="why-item"><div class="why-check">✓</div><p><strong>Vetted & Licensed Agents</strong> — Every agent is independently verified, licensed, and reviewed by real past clients.</p></li>
+          <li class="why-item"><div class="why-check">✓</div><p><strong>Off-Market Access</strong> — Our agents source properties before they hit realestate.com.au — giving you a genuine edge.</p></li>
+          <li class="why-item"><div class="why-check">✓</div><p><strong>Nationwide Coverage</strong> — Specialists in every Australian state, from Sydney's inner suburbs to regional growth corridors.</p></li>
+          <li class="why-item"><div class="why-check">✓</div><p><strong>Investment & Owner-Occupier</strong> — Whether you're chasing yield or a forever home, we match to your exact goal.</p></li>
+        </ul>
+      </div>
+      <div>
+        <div class="t-card"><div class="stars">★★★★★</div><div class="t-quote">"I had no idea where to start. PropertyMatcher connected me with a Melbourne specialist who found an off-market 3BR in Thornbury — $45k under comparable sales. Life-changing."</div><div class="t-author"><div class="t-avatar">JT</div><div><div class="t-name">James T.</div><div class="t-loc">First Home Buyer · Melbourne, VIC</div></div></div></div>
+        <div class="t-card"><div class="stars">★★★★★</div><div class="t-quote">"Used PropertyMatcher twice for investment purchases. Both times matched within 24 hours, both agents found positive-cashflow properties I never would've found on my own."</div><div class="t-author"><div class="t-avatar">SR</div><div><div class="t-name">Sophia R.</div><div class="t-loc">Property Investor · Sydney, NSW</div></div></div></div>
+        <div class="t-card"><div class="stars">★★★★★</div><div class="t-quote">"As a busy professional I didn't have time for auctions. My agent handled everything and negotiated $38k off the asking price. Worth every minute of that 3-minute quiz."</div><div class="t-author"><div class="t-avatar">ML</div><div><div class="t-name">Michael L.</div><div class="t-loc">Owner Occupier · Brisbane, QLD</div></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <div class="wrap">
+    <h2>Ready to Find Your Buyers Agent?</h2>
+    <p>Free matching. Vetted experts. Nationwide coverage. Join thousands of Australians who bought smarter.</p>
+    <a href="#quiz" class="btn-amber-lg">Start My Free Assessment →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-grid">
+    <div class="f-brand">
+      <a class="logo" href="#">Property<em>Matcher</em></a>
+      <p>Australia's trusted platform connecting buyers with specialist buyers agents. Free matching, vetted professionals, nationwide coverage.</p>
+    </div>
+    <div class="f-col"><h4>Service</h4><ul><li><a href="#">How It Works</a></li><li><a href="#">Find an Agent</a></li><li><a href="#">Investment</a></li><li><a href="#">First Home Buyers</a></li></ul></div>
+    <div class="f-col"><h4>Resources</h4><ul><li><a href="#">Calculators</a></li><li><a href="#">Suburb Guides</a></li><li><a href="#">Market Reports</a></li><li><a href="#">Blog</a></li></ul></div>
+    <div class="f-col"><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">For Agents</a></li><li><a href="#">Contact</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
+  </div>
+  <div class="f-base"><span>© 2025 PropertyMatcher Australia Pty Ltd · ABN: XX XXX XXX XXX</span><span>Australian Credit Licence XXXXXX</span></div>
+  <p class="f-dis">PropertyMatcher is a referral and lead generation platform only. We are not a licensed real estate agency or financial adviser. All calculator results are estimates only and should not be relied upon as financial advice. Please seek independent professional advice before making any property or financial decisions.</p>
+</footer>
+
+<script>
+// ── HERO MINI QUIZ ──
+function hNext(el,s){el.closest('.hc-opts').querySelectorAll('.hc-opt').forEach(o=>o.classList.remove('on'));el.classList.add('on');setTimeout(()=>{document.getElementById('hs'+s).classList.add('hidden');const nx=s<3?'hs'+(s+1):'hs-done';document.getElementById(nx).classList.remove('hidden');if(s<3)document.getElementById('hp'+(s+1)).classList.add('active');},280);}
+function hDone(el){el.closest('.hc-opts').querySelectorAll('.hc-opt').forEach(o=>o.classList.remove('on'));el.classList.add('on');setTimeout(()=>{document.getElementById('hs3').classList.add('hidden');document.getElementById('hs-done').classList.remove('hidden');},280);}
+
+// ── MAIN QUIZ ──
+const qd={};
+function qSel(el,k,v){el.closest('.q-opts').querySelectorAll('.q-opt').forEach(o=>o.classList.remove('on'));el.classList.add('on');qd[k]=v;}
+function qGo(f,t){document.getElementById('qs'+f).classList.add('hidden');document.getElementById('qs'+t).classList.remove('hidden');document.getElementById('quiz').scrollIntoView({behavior:'smooth',block:'start'});}
+function qSubmit(){
+  const fn=document.getElementById('qfn').value,em=document.getElementById('qem').value,ph=document.getElementById('qph').value;
+  if(!fn||!em||!ph){alert('Please complete your name, email and phone.');return;}
+  document.getElementById('qs9').classList.add('hidden');
+  document.getElementById('s-name').textContent=fn;
+  const m={goal:{fh:'First Home',inv:'Investment',up:'Upgrading',dn:'Downsizing'},budget:{u500:'Under $500k','500_800':'$500k–$800k','800_1200':'$800k–$1.2M','1200_2m':'$1.2M–$2M','2mplus':'$2M+'},savings:{u50:'Under $50k','50_100':'$50k–$100k','100_200':'$100k–$200k','200plus':'$200k+'},income:{u80:'Under $80k','80_150':'$80k–$150k','150_250':'$150k–$250k','250plus':'$250k+'},existing:{none:'None',one:'1 property',two3:'2–3',four:'4+'},status:{single:'Single',couple:'Couple',family:'Family',joint:'Joint'},state:{vic:'Victoria',nsw:'NSW',qld:'Queensland',wa:'Western Australia',sa:'South Australia',other:'Other'},timeline:{now:'ASAP','3m':'3 months','6m':'3–6 months','12m':'6–12 months'}};
+  let h='';[['Goal','goal'],['Budget','budget'],['Deposit','savings'],['Income','income'],['Portfolio','existing'],['Status','status'],['State','state'],['Timeline','timeline']].forEach(([l,k])=>{if(qd[k])h+=`<div class="s-row"><span class="s-k">${l}</span><span class="s-v">${(m[k]&&m[k][qd[k]])||qd[k]}</span></div>`;});
+  document.getElementById('s-sum').innerHTML=h;
+  document.getElementById('qs-ok').classList.remove('hidden');
+}
+
+// ── CALCULATORS ──
+const fmt=n=>'$'+Math.round(n).toLocaleString('en-AU'), pct=n=>n.toFixed(2)+'%';
+function doMort(){const P=+document.getElementById('ml').value,r=+document.getElementById('mr').value/100/12,n=+document.getElementById('mt').value*12,io=document.getElementById('mrt').value==='io',mo=io?P*r:P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1),tot=mo*n,int=io?tot:tot-P;document.getElementById('mm').textContent=fmt(mo);document.getElementById('mw').textContent=fmt(mo*12/52);document.getElementById('mf').textContent=fmt(mo*12/26);document.getElementById('ma').textContent=fmt(mo*12);document.getElementById('mi').textContent=fmt(int);document.getElementById('mto').textContent=fmt(tot);}
+function doBorrow(){const i=+document.getElementById('bi').value,e=+document.getElementById('be').value,d=+document.getElementById('bd').value,dep=+document.getElementById('bde').value,mi=i/12,av=mi*0.28-e*0.3-d-dep*400,r=0.09/12,n=360,pw=Math.pow(1+r,n),max=av*(pw-1)/(r*pw);document.getElementById('bmax').textContent=fmt(Math.max(0,max));document.getElementById('blow').textContent=fmt(Math.max(0,max*0.85));document.getElementById('bmo').textContent=fmt(Math.max(0,av));document.getElementById('bnet').textContent=fmt(mi*0.72-e-d);}
+function doStamp(){const p=+document.getElementById('sdp').value,st=document.getElementById('sds').value,t=document.getElementById('sdt').value;let d=0;if(st==='VIC'){if(p<=25000)d=p*0.014;else if(p<=130000)d=350+(p-25000)*0.024;else if(p<=960000)d=2870+(p-130000)*0.06;else d=p*0.055;if(t==='fhb'&&p<=600000)d=0;else if(t==='fhb'&&p<=750000)d=d*(p-600000)/150000;}else if(st==='NSW'){if(p<=14000)d=p*0.0125;else if(p<=32000)d=175+(p-14000)*0.015;else if(p<=85000)d=445+(p-32000)*0.0175;else if(p<=319000)d=1372+(p-85000)*0.035;else if(p<=1064000)d=9562+(p-319000)*0.045;else d=43087+(p-1064000)*0.055;if(t==='fhb'&&p<=800000)d=0;}else if(st==='QLD'){if(p<=5000)d=0;else if(p<=75000)d=(p-5000)*0.015;else if(p<=540000)d=1050+(p-75000)*0.035;else if(p<=1e6)d=17325+(p-540000)*0.045;else d=38025+(p-1e6)*0.0575;}else{d=p*0.04;if(t==='fhb')d*=0.5;}document.getElementById('sdv').textContent=fmt(d);document.getElementById('sdpp').textContent=fmt(p);document.getElementById('sdsd').textContent=fmt(d);document.getElementById('sdtot').textContent=fmt(d+3000);}
+function doYield(){const v=+document.getElementById('yv').value,w=+document.getElementById('yw').value,c=+document.getElementById('yc').value,ann=w*52,gr=ann/v*100,ni=ann-c,nt=ni/v*100;document.getElementById('ygr').textContent=pct(gr);document.getElementById('yann').textContent=fmt(ann);document.getElementById('ynet').textContent=pct(nt);document.getElementById('yni').textContent=fmt(ni);}
+function doCF(){const p=+document.getElementById('cfp').value,dep=+document.getElementById('cfd').value/100,r=+document.getElementById('cfr').value/100/12,w=+document.getElementById('cfw').value,c=+document.getElementById('cfc').value,loan=p*(1-dep),n=360,mort=loan*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1),mr=w*52/12,mc=c/12,cf=mr-mort-mc;document.getElementById('cfmo').textContent=(cf>=0?'+':'')+fmt(cf);document.getElementById('cfmo').style.color=cf>=0?'#6abf87':'#e07070';document.getElementById('cfmr').textContent=fmt(mr);document.getElementById('cfmm').textContent=fmt(mort);document.getElementById('cfmc').textContent=fmt(mc);document.getElementById('cfann').textContent=(cf*12>=0?'+':'')+fmt(cf*12);}
+function cSwitch(btn,id){document.querySelectorAll('.c-tab').forEach(b=>b.classList.remove('on'));document.querySelectorAll('.cpanel').forEach(p=>p.classList.remove('on'));btn.classList.add('on');document.getElementById('cp-'+id).classList.add('on');}
+doMort();doBorrow();doStamp();doYield();doCF();
+
+// ── FADE IN ──
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis');}),{threshold:0.07});
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
